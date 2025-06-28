@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+      background-color:black;
+      color: white;
+      font-family: Arial;
+      text-align: center;
+      padding: 20px;
+    }
+    .box {
+      background-color: white;
+      color: black;
+      padding: 20px;
+      width: 300px;
+      margin: auto;
+      margin-top: 40px;
+      border-radius: 10px;
+    }
+    input, select {
+      padding: 10px;
+      margin-top: 10px;
+      width: 100%;
+    }
+    label {
+      display: block;
+      text-align: left;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>73.66 Indian Rupee</h2>
+
+  <div class="box">
+    <label>Select Currency</label>
+    <select id="currency" onchange="convert()">
+      <option value="usd">Dollar</option>
+    </select>
+
+    <label>Amount</label>
+    <input type="number" id="dollar" placeholder="Enter amount" oninput="convert()">
+
+    <label>In Rupees</label>
+    <input type="text" id="rupee" readonly>
+  </div>
+
+  <script>
+    function convert() {
+      var dollarValue = document.getElementById("dollar").value;
+      var rupeeRate = 73.66;
+      var result = dollarValue * rupeeRate;
+      document.getElementById("rupee").value = result;
+    }
+  </script>
+
+</body>
+</html>
+
+    
+</body>
+</html>
